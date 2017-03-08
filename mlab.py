@@ -1,10 +1,10 @@
 import mongoengine
-#mongodb://<dbuser>:<dbpassword>@ds121980.mlab.com:21980/a7-dummy
-host = "ds121980.mlab.com"
-port = 21980
-db_name = "a7-dummy"
-username = "admin"
-password = "admin"
+# mongodb://<dbuser>:<dbpassword>@ds035683.mlab.com:35683/a7-server-apihost = "ds121980.mlab.com"
+host = "@ds035683.mlab.com"
+port = 35683
+db_name = "a7-server-api"
+username = "tranhanhieu"
+password = "tranhanhieu"
 def connect():
     mongoengine.connect(db_name, host=host, port=port, username=username, password=password)
 def list2json(l):
