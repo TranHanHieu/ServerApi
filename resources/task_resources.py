@@ -41,11 +41,11 @@ class TaskRes(Resource):
         task.update(name=name, local_id=local_id, done=done)
         task_update = Task.objects().with_id(task_id)
         return mlab.item2json(task_update)
-    def delete(self,task_id):
-        def delete(self, task_id):
-            task = Task.objects().with_id(task_id)
-            if task == None:
-                return {"message": "Task not found"}
-            else:
-                task.delete()
-                return {"message": "Delete Success"}
+
+    def delete(self, task_id):
+        task = Task.objects().with_id(task_id)
+        if task == None:
+            return {"message": "Task not found"}
+        else:
+            task.delete()
+            return {"message": "Delete Success"}
