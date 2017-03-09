@@ -13,10 +13,10 @@ class TaskListRes(Resource):
         parser.add_argument(name = "local_id",type = str,location = "json")
         body = parser.parse_args()
 
-        name1 = body["name"]
-        local_id1 = body["local_id"]
+        name = body["name"]
+        local_id = body["local_id"]
 
-        task=Task(name = name1, local_id = local_id1,done = False)
+        task=Task(name = name, local_id = local_id,done = False)
         task.save()
 
         added_task = Task.objects().with_id(task.id)
