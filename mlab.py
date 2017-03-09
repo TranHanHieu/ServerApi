@@ -1,6 +1,6 @@
 import mongoengine
 # mongodb://<dbuser>:<dbpassword>@ds035683.mlab.com:35683/a7-server-apihost = "ds121980.mlab.com"
-host = "@ds035683.mlab.com"
+host = "ds035683.mlab.com"
 port = 35683
 db_name = "a7-server-api"
 username = "tranhanhieu"
